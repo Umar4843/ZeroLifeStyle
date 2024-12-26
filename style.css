@@ -10,6 +10,10 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  /* position: relative; */
+  /* top: 0; */
+  position: fixed;
+  z-index: 100;
  
 }
 .navbar a{
@@ -58,7 +62,7 @@ display: none !important;
 html,
 body {
   position: relative;
-  height: 100%;
+  height: auto;
 }
 
 body {
@@ -72,7 +76,7 @@ body {
 
 .swiper {
   width: auto;
-  height: 500px;
+  height: 100%;
 }
 
 .swiper-slide {
@@ -90,6 +94,49 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+.slider1{
+  background-image: url("https://zerolifestyle.co/cdn/shop/files/desktop-vibe.webp?v=1734775353&width=1400"
+  )!important;
+  height: 550px;
+  width: auto;
+  background-size: cover;
+  margin-top:55px;
+}
+.slider2{
+  background-image: url("https://cdn.shopify.com/s/files/1/0722/8106/3702/files/Wave-Neo-KV-Option-4-Home-Page-Banner-Desktop.webp?v=1733053330"
+  )!important;
+  height: 550px;
+  width: auto;
+  background-size: cover;
+  margin-top:55px;
+
+}
+.slider3{
+  background-image: url("https://cdn.shopify.com/s/files/1/0722/8106/3702/files/Crown-Live-Now-Web-Banner-Desktop-Version.webp?v=1732777922"
+  )!important;
+  height: 550px;
+  width: auto;
+  background-size: cover;
+  margin-top: 55px;
+
+}
+.slider4{
+  background-image: url("https://cdn.shopify.com/s/files/1/0722/8106/3702/files/Arcade-800-Live-Now-Desktop-Web-Banner.webp?v=1732284643"
+  )!important;
+  height: 550px;
+  width: auto;
+  margin-top: 55px;
+  background-size: cover;
+}
+.slider5{
+  background-image: url("https://cdn.shopify.com/s/files/1/0722/8106/3702/files/Arcade-900-Live-Now-Desktop-Web-Banner.webp?v=1732284643"
+  )!important;
+  height: 550px;
+  width: auto;
+  margin-top: 55px;
+  background-size: cover;
+}
 .float{
 	position:fixed;
 	width:60px;
@@ -105,6 +152,8 @@ body {
   z-index:100;
   flex-wrap: wrap;
 }
+
+
 
 .my-float{
 	margin-top:16px;
@@ -307,22 +356,6 @@ body {
   flex-wrap: wrap;
 
 }
-.my-image>img{
-  height:900px;
-  width: 100%;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  flex-wrap: wrap;
-
-}
-.my-image{
-  /* background-image: url("https://cdn.shopify.com/s/files/1/0722/8106/3702/files/FAWAD_KEYVISUALS_2.0.webp?v=1710833635"); */
-  background-position: center;
-  background-size: cover;
-  height: auto;
-  width: 100%;
-}
-
 .heading{
   margin: 20px 20px;
   flex-wrap: wrap;
@@ -430,12 +463,28 @@ ul{
   .icons{
       display: none;
   }
+ 
   .navbarList{
-      display: none;
+    position: absolute;
+    bottom: 0px;
+    /* display: flex; */
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    background-color: black;
+    transition-duration: .3s;
+    /* transition: ease-in-ou t; */
+  }
+  .navbarList .list-items{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    color: white;
   }
   .hamburger{
       display: block !important;
       margin-right: 0;
+      cursor: pointer;
   }
   .images{
     height: auto!important;
@@ -444,7 +493,7 @@ ul{
     margin-top: 20px;
   }
   .my-image{
-    display: non
+    display: none;
     background-image: url("https://cdn.shopify.com/s/files/1/0722/8106/3702/files/New-Website-Earbuds-Category-Fawad-Banner.webp?v=1732355317");
 
   }
@@ -458,6 +507,58 @@ ul{
   .footer{
     margin-bottom: 110px;
   }
+  
+
+}
+.open{
+  bottom: -150px;
+height: 150px;
+}
+
+@media screen and (max-width:768px) {
+  .slider1{
+    /* background-color: red; */
+    background-image: url("https://zerolifestyle.co/cdn/shop/files/mobile-vibe.webp?v=1734775354&width=1400"
+    )!important;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+  }
+  .slider2{
+    background-image: url("https://zerolifestyle.co/cdn/shop/files/Wave-Neo-KV-Option-4-Home-Page-Mobile-Banner-Live-Now.webp?v=1733309134&width=600"
+    )!important;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+  }
+  .slider3{
+    /* background-color: red; */
+    background-image: url("https://zerolifestyle.co/cdn/shop/files/Crown-Live-Now-Web-Banner-Mobile-Version.webp?v=1732777921&width=1200"
+    )!important;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+  }
+  .slider4{
+    /* background-color: red; */
+    background-image: url("https://zerolifestyle.co/cdn/shop/files/Arcade-800-Live-Now-Mobile-Web-Banner.webp?v=1732284643&width=1200"
+    )!important;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+  }
+  .slider5{
+    /* background-color: red; */
+    background-image: url("https://zerolifestyle.co/cdn/shop/files/Arcade-900-Live-Now-Mobile-Web-Banner.webp?v=1732284643&width=1200"
+    )!important;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+  }
+  
+
+
+
 
 }
 @media screen and (max-width:1200px) {
