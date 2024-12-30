@@ -192,8 +192,14 @@ body {
   margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  overflow-x: auto ;
+  gap: 15px;
+  margin-left: 20px;
 
+}
+.cards::-webkit-scrollbar{
+  display: none;
 }
 .card{
   height: auto;
@@ -202,7 +208,7 @@ body {
   border: 1px solid lightgray;
   border-radius: 3px;
   padding-bottom: 20px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 
 }
 .topBar{
