@@ -503,6 +503,9 @@ ul{
     background-image: url("https://cdn.shopify.com/s/files/1/0722/8106/3702/files/New-Website-Earbuds-Category-Fawad-Banner.webp?v=1732355317");
 
   }
+  .cards{
+    margin-left: 20px;
+  }
   .card{
     margin-top: 20px;
   }
